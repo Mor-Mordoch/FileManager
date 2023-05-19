@@ -141,10 +141,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="FMOperations\IFMOperations.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="FMOperations\PrintDirectoryContent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileManager.h" />
+    <ClInclude Include="FMOperations\IFMOperations.h" />
+    <ClInclude Include="FMOperations\PrintDirectoryContent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

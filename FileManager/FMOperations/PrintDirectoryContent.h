@@ -4,8 +4,7 @@
 class PrintDirectoryContent : public IFMOperations
 {
 public:
-	PrintDirectoryContent(fs::path path) : IFMOperations(path) {}
-	void Execute(fs::path path) override;
-	void Execute(fs::path srcPath, fs::path dstPath) override;
+	PrintDirectoryContent(fs::path srcPath, fs::path dstPath = fs::path()) : IFMOperations(srcPath, dstPath) {}
+	void Execute() override;
 };
 

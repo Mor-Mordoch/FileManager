@@ -1,16 +1,19 @@
 #include "FileManager.h"
 
-FileManager::FileManager(fs::path path) : m_srcPath(path)
-{
-	m_FMOperation = new PrintDirectoryContent(path);
-}
-
 FileManager::FileManager(fs::path srcPath, fs::path dstPath)
 {
-
+	m_FMOperation = new PrintDirectoryContent(srcPath, dstPath);
+	if (dstPath != fs::path())
+	{
+		std::cout << "Two paths";
+		m_dstPath = dstPath;
+	}
+	else {
+		std::cout << "one path";
+	}
 }
 
 void FileManager::Execute()
 {
-	m_FMOperation->Execute(m_srcPath);
+	m_FMOperation->Execute();
 }

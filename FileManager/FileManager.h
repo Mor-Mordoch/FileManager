@@ -8,11 +8,11 @@ namespace fs = std::filesystem;
 class FileManager
 {
 public:
-	FileManager(fs::path path);
-	FileManager(fs::path srcPath, fs::path dstPath);
+	FileManager(fs::path srcPath, fs::path dstPath = fs::path());
 	void Execute();
 private:
 	IFMOperations* m_FMOperation;
 	fs::path m_srcPath;
+	fs::path m_dstPath;
 };
 
